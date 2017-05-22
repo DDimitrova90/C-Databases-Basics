@@ -1,0 +1,76 @@
+--CREATE DATABASE University
+--USE University
+
+CREATE TABLE Majors
+(
+MajorID INT IDENTITY(1,1),
+Name VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE Students
+(
+StudentID INT IDENTITY(1,1),
+StudentNumber INT NOT NULL,
+StudentName VARCHAR(50) NOT NULL,
+MajorID INT NOT NULL
+)
+
+CREATE TABLE Payments
+(
+PaymentID INT IDENTITY(1,1),
+PaymentDate DATE NOT NULL,
+PaymentAmount MONEY NOT NULL,
+StudentID INT NOT NULL
+)
+
+CREATE TABLE Subjects
+(
+SubjectID INT IDENTITY(1,1),
+SubjectName VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE Agenda
+(
+StudentID INT NOT NULL,
+SubjectID INT NOT NULL
+)
+
+ALTER TABLE Majors
+ADD CONSTRAINT PK_Majors
+PRIMARY KEY (MajorID)
+
+ALTER TABLE Students
+ADD CONSTRAINT PK_Students
+PRIMARY KEY (StudentID)
+
+ALTER TABLE Students
+ADD CONSTRAINT FK_Students_Majors
+FOREIGN KEY (MajorID)
+REFERENCES Majors(MajorID)
+
+ALTER TABLE Payments
+ADD CONSTRAINT PK_Payments
+PRIMARY KEY (PaymentID)
+
+ALTER TABLE Payments
+ADD CONSTRAINT FK_Payments_Students
+FOREIGN KEY (StudentID)
+REFERENCES Students(StudentID)
+
+ALTER TABLE Subjects
+ADD CONSTRAINT PK_Subjects
+PRIMARY KEY (SubjectID)
+
+ALTER TABLE Agenda
+ADD CONSTRAINT PK_StudentID_SubjectID
+PRIMARY KEY (StudentID, SubjectID)
+
+ALTER TABLE Agenda
+ADD CONSTRAINT FK_Students
+FOREIGN KEY (StudentID)
+REFERENCES Students(StudentID)
+
+ALTER TABLE Agenda
+ADD CONSTRAINT FK_Subjects
+FOREIGN KEY (SubjectID)
+REFERENCES Subjects(SubjectID)
