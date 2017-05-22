@@ -10,7 +10,7 @@ AS
 EXECUTE usp_EmployeesBySalaryLevel 'High'
 
 
-/* от видеото
+/* From video
 CREATE PROC usp_EmployeesBySalaryLevel (@salaryLevel VARCHAR(10))
 AS
 BEGIN

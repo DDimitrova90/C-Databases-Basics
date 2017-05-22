@@ -2,7 +2,7 @@ CREATE PROC udp_SendMessage (@userId INT, @chatId INT, @content VARCHAR(200))
 AS
 BEGIN
    DECLARE @count INT = (
-                         SELECT COUNT(*) FROM UsersChats AS uc   -- грешката ми беше, че търсих в Chats, а не в UsersChats
+                         SELECT COUNT(*) FROM UsersChats AS uc   
                          WHERE uc.UserId = @userId 
 						 AND uc.ChatId = @chatId
 						);

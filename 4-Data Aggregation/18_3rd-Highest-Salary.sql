@@ -1,5 +1,5 @@
 SELECT DepartmentID, 
-(SELECT DISTINCT Salary         -- not my solution!!!!
+(SELECT DISTINCT Salary        
    FROM Employees 
    WHERE DepartmentID = e.DepartmentID 
    ORDER BY Salary DESC 
@@ -14,7 +14,7 @@ WHERE (SELECT DISTINCT Salary
 		 FETCH NEXT 1 ROW ONLY) IS NOT NULL
 GROUP BY DepartmentID
 
--- със ранкиране!!!!
+-- with ranking!!!!
 /*
 SELECT Salaries.DepartmentID, Salaries.MaxSalary FROM
 (

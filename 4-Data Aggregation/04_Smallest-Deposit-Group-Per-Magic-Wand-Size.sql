@@ -23,7 +23,7 @@ HAVING AVG(MagicWandSize) = (
 
 
 /*
-SELECT TOP 1 WITH TIES DepositGroup   -- with ties връща и всички, равни на TOP 1  
+SELECT TOP 1 WITH TIES DepositGroup   -- with ties returns all results that have value as top 1  
 FROM WizzardDeposits
 GROUP BY DepositGroup
 ORDER BY AVG(MagicWandSize)

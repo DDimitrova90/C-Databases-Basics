@@ -27,7 +27,7 @@ BEGIN TRANSACTION
 ROLLBACK  -- трябва да е COMMIT
 
 
-/*  от видеото
+/*  From video
 ALTER TABLE Departments
 ALTER COLUMN ManagerId INT NULL
 

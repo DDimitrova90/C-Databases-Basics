@@ -1,5 +1,5 @@
 SELECT Id, ChatId, UserId 
-FROM Messages                                                  -- not my solution!!!! :(
+FROM Messages                                                 
 WHERE (UserId NOT IN (
                       SELECT uc.UserId FROM UsersChats AS uc
                       INNER JOIN Messages AS m

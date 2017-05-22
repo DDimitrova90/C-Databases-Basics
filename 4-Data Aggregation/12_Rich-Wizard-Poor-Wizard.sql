@@ -2,8 +2,8 @@ SELECT SUM(NewTable.SumDifference) AS SumDifference
 FROM
 (SELECT h.DepositAmount - (SELECT DepositAmount 
                              FROM WizzardDeposits 
-							 WHERE Id = h.Id + 1) AS SumDifference  -- създаваме нова колона
-							 FROM WizzardDeposits h) AS NewTable    -- създаваме нова таблица
+							 WHERE Id = h.Id + 1) AS SumDifference  -- create new column
+							 FROM WizzardDeposits h) AS NewTable    -- create new table
 
 /*
 var totalSum
@@ -14,7 +14,7 @@ while(there are deposits)
 totalSum += previousDeposit - currentDeposit
 */
 
--- задача с курсори
+-- task with cursors
 /*
 DECLARE @currentDeposit DECIMAL(8,2)
 DECLARE @previousDeposit DECIMAL(8,2)
@@ -39,7 +39,7 @@ CLOSE wizardCursor
 DEALLOCATE wizardCursor
 
 
--- LEAD намира следващата стойност, а LAG намира предишната
+-- LEAD finds the next value, аnd LAG finds the previous one
 SELECT @totalSum AS SumDifference
 */
 

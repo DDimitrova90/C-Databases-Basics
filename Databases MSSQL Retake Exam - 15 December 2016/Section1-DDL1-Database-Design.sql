@@ -1,5 +1,5 @@
-CREATE DATABASE TheNerdHerd     -- за 25 т. иска в UsersChats в Primary key-a първо да е ChatId, после UserId
-                                -- тр Ид-тата навсякъде да за идентити, а не го пише!!!!
+CREATE DATABASE TheNerdHerd     -- in table UsersChats in the Primary key must be first ChatId, then UserId
+                                -- All IDs must be IDENTITY
 CREATE TABLE Chats
 (
 Id INT IDENTITY,
@@ -32,7 +32,7 @@ CONSTRAINT PK_Users PRIMARY KEY (Id),
 Nickname VARCHAR(25),
 Gender CHAR(1),
 Age INT,
-LocationId INT,   -- в условието са Location_id и Credential_id, а не ги иска така джъдж
+LocationId INT,  
 CredentialId INT UNIQUE,
 CONSTRAINT FK_Users_Locations
 FOREIGN KEY (LocationId)

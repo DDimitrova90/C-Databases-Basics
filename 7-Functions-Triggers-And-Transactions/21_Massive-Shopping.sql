@@ -32,9 +32,9 @@ BEGIN TRANSACTION
    END
    ELSE
    BEGIN
-      ROLLBACK;  -- ј тук без RAISERROR и RETURN
+      ROLLBACK;  -- Here without RAISERROR and RETURN
    END
-         -- тук б€х сложила COMMIT, а не горе в IF-а и не ставаше
+         
 DECLARE @secondItemsPrice MONEY = (SELECT SUM(i.Price) 
                                   FROM Items AS i
 								  WHERE i.MinLevel IN (19, 20, 21));

@@ -40,7 +40,7 @@ SET Balance -= 100
 WHERE Id = 1
 
 
-/*  от видеото 
+/*  From video
 CREATE TABLE Logs
 (
 LogId INT IDENTITY,

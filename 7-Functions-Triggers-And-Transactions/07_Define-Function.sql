@@ -6,7 +6,7 @@ BEGIN
 	 DECLARE @startIndex INT = 1;
 	 DECLARE @wordLen INT = LEN(@word);
 	 
-	 WHILE (@startIndex <= @wordLen)   --тук ми беше грешката (докато @result = 1 не става)
+	 WHILE (@startIndex <= @wordLen)   
 	 BEGIN
 	      DECLARE @currentLetter VARCHAR(1) = SUBSTRING(@word, @startIndex, 1);
 
@@ -45,7 +45,7 @@ FROM Test AS t
 
 
 
-/* от видеото
+/* From video
 CREATE FUNCTION ufn_IsWordComprised(@setOfLetters VARCHAR(MAX), @word VARCHAR(MAX))
 RETURNS BIT
 AS

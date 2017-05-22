@@ -31,7 +31,7 @@ INSERT INTO Monasteries(Name, CountryCode) VALUES
 ('Sümela Monastery', 'TR')
 
 ALTER TABLE Countries
-ADD IsDeleted BIT NOT NULL DEFAULT 0  -- NOT NULL задължително при DEFAULT
+ADD IsDeleted BIT NOT NULL DEFAULT 0  -- NOT NULL when we set DEFAULT
 
 UPDATE Countries
 SET IsDeleted = 1

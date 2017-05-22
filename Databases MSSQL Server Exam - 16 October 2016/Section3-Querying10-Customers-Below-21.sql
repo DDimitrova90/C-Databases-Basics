@@ -1,6 +1,6 @@
 SELECT 
 DISTINCT c.CustomerID,
-c.FirstName + ' ' + c.LastName AS FullName,  -- може да има един клиент, който е лятал повече от един път и затова тр DISTINCT
+c.FirstName + ' ' + c.LastName AS FullName,  -- a client can fly more than one time, so we have to use DISTINCT
 DATEDIFF(YEAR, c.DateOfBirth, '2016') AS Age
 FROM Customers AS c
 INNER JOIN Tickets AS t

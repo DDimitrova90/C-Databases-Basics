@@ -1,5 +1,5 @@
 SELECT 
-Username,                         -- not my solution!!!!
+Username,                         
 g.Name AS Game, 
 MAX(c.Name) AS Character,
 SUM(its.Strength) + MAX(chs.Strength) + MAX(gts.Strength) AS [Strength],

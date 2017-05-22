@@ -6,7 +6,7 @@ BEGIN
 	                                          SELECT cba.Balance FROM CustomerBankAccounts AS cba 
 	                                          WHERE cba.CustomerID = @CustomerID
 											 );
-    IF (@customerBalance IS NULL)      -- може да го няма въобще в таблицата !!!
+    IF (@customerBalance IS NULL)      
 	BEGIN
 	   SET @customerBalance = 0;
 	END
@@ -19,7 +19,7 @@ BEGIN
 	BEGIN
 	   DECLARE @ticketId INT = (SELECT MAX(t.TicketID) FROM Tickets AS t) + 1;
 
-	   IF (@ticketId IS NULL)  -- тук може да проверявам дали COUNT-а е 0
+	   IF (@ticketId IS NULL)  -- can check if COUNT = 0
 	   BEGIN
 	      SET @ticketId = 1;
 	   END

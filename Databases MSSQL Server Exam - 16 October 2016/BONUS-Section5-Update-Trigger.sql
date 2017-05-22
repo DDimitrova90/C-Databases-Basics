@@ -32,7 +32,7 @@ BEGIN
 END
 
 
--- не е мое решение
+-- not my solution
 CREATE TRIGGER tr_LogArrivedFlight
 ON Flights
 AFTER UPDATE

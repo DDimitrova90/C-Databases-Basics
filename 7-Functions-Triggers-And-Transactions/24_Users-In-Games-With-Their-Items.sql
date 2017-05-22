@@ -9,7 +9,7 @@ ON u.Id = ug.UserId
 INNER JOIN Games AS g
 ON ug.GameId = g.Id
 INNER JOIN UserGameItems AS ugi
-ON ug.Id = ugi.UserGameId    -- тук ми беше грешката: ug.GameId ??
+ON ug.Id = ugi.UserGameId    
 INNER JOIN Items AS i
 ON ugi.ItemId = i.Id
 GROUP BY u.Username, g.Name

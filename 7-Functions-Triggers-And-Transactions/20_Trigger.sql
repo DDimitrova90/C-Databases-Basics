@@ -1,4 +1,4 @@
-UPDATE UsersGames                     -- задачата не е решена!!!
+UPDATE UsersGames                    
 SET Cash += 50000
 WHERE UserId IN (SELECT Id 
                  FROM Users

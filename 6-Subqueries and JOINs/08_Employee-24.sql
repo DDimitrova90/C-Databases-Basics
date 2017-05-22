@@ -6,7 +6,7 @@ LEFT OUTER JOIN EmployeesProjects AS ep
 ON e.EmployeeID = ep.EmployeeID
 LEFT OUTER JOIN Projects AS p
 ON ep.ProjectID = p.ProjectID
-AND p.StartDate < '2005'   -- това защо минава?
+AND p.StartDate < '2005'   
 WHERE ep.EmployeeID = 24
 
 /*

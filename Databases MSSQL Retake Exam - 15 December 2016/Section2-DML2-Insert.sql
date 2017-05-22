@@ -1,4 +1,4 @@
-INSERT INTO Messages (Content, SentOn, ChatId, UserId)    -- между SELECT и FROM трябва да се изброят колоните
+INSERT INTO Messages (Content, SentOn, ChatId, UserId)    
 SELECT 
 CONCAT(u.Age, '-', u.Gender, '-', l.Latitude, '-', l.Longitude),
 CONVERT(DATE, GETDATE()),

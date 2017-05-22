@@ -1,6 +1,6 @@
 SELECT TOP 5 c.CountryName, r.RiverName
 FROM Countries AS c
-LEFT OUTER JOIN Continents AS con       -- да питам защо не става с AND под първия ON, а трябва да е с WHERE
+LEFT OUTER JOIN Continents AS con       
 ON c.ContinentCode = con.ContinentCode
 LEFT OUTER JOIN CountriesRivers AS cr
 ON c.CountryCode = cr.CountryCode

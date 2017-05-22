@@ -11,7 +11,7 @@ BEGIN
       DECLARE @ReviewId INT = (SELECT MAX(cr.ReviewID) FROM CustomerReviews AS cr) + 1;
 	  DECLARE @AirlineId INT = (SELECT a.AirlineID FROM Airlines AS a WHERE a.AirlineName = @AirlineName);
 
-	  IF (@ReviewId IS NULL)    -- ако таблицата е била празна, горното + 1 ще е равно на NULL
+	  IF (@ReviewId IS NULL)    
 	  BEGIN
 	     SET @ReviewId = 1;
 	  END

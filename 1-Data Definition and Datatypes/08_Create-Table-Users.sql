@@ -8,11 +8,11 @@ LastLoginTime varchar(10),
 IsDeleted varchar(5) CHECK (IsDeleted in ('true', 'false'))
 )
 
--- Трябва да се добави ръчно, защото ограничението е в KB, а ако напишем varbinary(900) това са 900 байта!!!!
+-- varbinary(900) is bytes
 ALTER TABLE Users
 ADD CONSTRAINT CH_PictureSize CHECK (DATALENGTH(ProfilePicture) <= 900 * 1024)
 
--- Така все едно си създаваме снимка
+-- Creating picture
 -- DECLARE @C VARCHAR(MAX) = '|'
 -- @ProfilePicture VARBINARY(MAX) = CONVERT(VARBINARY(MAX), REPLICATE(@C, (921600)));
  

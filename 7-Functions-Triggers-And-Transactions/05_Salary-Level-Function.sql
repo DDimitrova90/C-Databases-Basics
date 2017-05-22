@@ -25,7 +25,7 @@ e.Salary,
 dbo.ufn_GetSalaryLevel(salary) AS [Salary Level]
 FROM Employees AS e
 
-/* От видеото
+/* from video
 CREATE FUNCTION ufn_GetSalaryLevel(@salary MONEY)
 RETURNS VARCHAR(10)
 AS

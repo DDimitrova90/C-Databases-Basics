@@ -14,7 +14,7 @@ END
 
 EXECUTE usp_GetHoldersWithBalanceHigherThan 500000
 
-/*   от видеото
+/*   From video
 CREATE PROC usp_GetHoldersWithBalanceHigherThan(@value MONEY)
 AS 
 BEGIN
